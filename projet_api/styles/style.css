@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2c2c2c;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 50px 0;
+    color: white;
+    margin-bottom: 100px;
+}
+
+.card-grid{
+    /*border: 1px solid #333;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    max-width: 1800px;
+    width: 80%;
+    margin: 30px auto 0;
+    justify-content: center;
+    grid-gap: 100px;
+    height: auto;
+}
+
+.card{
+    background: #f1f1f1;
+}
+
+.top-img{
+    display: block;
+    height: 300px;
+    width: 100%;
+    background-color: #4c4c4c;
+    object-fit: cover;
+}
+/*skeleton effect img*/
+.top-img.skeleton-anim {
+    animation: skeleton 0.8s ease-in-out infinite alternate;
+}
+@keyframes skeleton {
+    to{
+        opacity: 0.6;
+    }
+}
+/*skeleton effect content*/
+.content{
+    padding: 15px;
+}
+.skeleton-title, .skeleton-text{
+    width: 60%;
+    background: #4c4c4c;
+    animation: skeleton 0.8s ease-in-out infinite alternate;
+}
+
+.skeleton-title{
+    height: 20px;
+}
+.skeleton-text{
+    margin-top: 10px;
+    height: 10px;
+}
+
+.skeleton-text:first-of-type{
+    width: 90%;
+}

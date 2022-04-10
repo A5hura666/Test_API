@@ -1,4 +1,4 @@
-const cardsGrid = document.querySelector(".cards-grid");
+const cardsGrid = document.querySelector(".card-grid");
 const cards = document.querySelectorAll(".card");
 
 const loadContent = async () => {
@@ -30,5 +30,4 @@ const createCards = data => {
   }
 
   cardsGrid.innerHTML = cardsList;
-
 }

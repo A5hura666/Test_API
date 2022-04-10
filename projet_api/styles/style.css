@@ -70,3 +70,10 @@ h1{
 .skeleton-text:first-of-type{
     width: 90%;
 }
+
+/*search*/
+
+form{
+    display: flex;
+    justify-content: center;
+}

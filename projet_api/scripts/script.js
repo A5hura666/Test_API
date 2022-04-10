@@ -4,6 +4,7 @@ const cards = document.querySelectorAll(".card");
 const loadContent = async () => {
   const results = await fetch("https://picsum.photos/v2/list")
   const data = await results.json()
+  console.log(data)
   createCards(data)
 }
 loadContent()
@@ -19,7 +20,7 @@ const createCards = data => {
     <div class="card">
       <img src=${data[i].download_url} class="top-img" />
       <div class="content">
-        <h3 class="card-title">Lorem, ipsum dolor sit amet</h3>
+        <h3 class="card-title">${data[i].author}</h3>
         <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, necessitatibus.</p>
         <p class="card-text">Lorem, ipsum dolor</p>
       </div>
